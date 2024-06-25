@@ -3,8 +3,11 @@ Support for user authentication and authorization.
 
 Main Functional Modules:
 Product Catalog: Viewing, searching, filtering, adding, modifying, and deleting products.
+
 Order Management: Creating orders, changing order statuses, tracking, and canceling orders.
+
 User Accounts: Registration, authentication, profile editing, and order history.
+
 Shopping Cart: Adding products, changing quantities, and removing products from the cart.
 
 Security:
