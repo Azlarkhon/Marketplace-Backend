@@ -153,13 +153,6 @@ func Login() gin.HandlerFunc {
 			return
 		}
 
-		createdAt, err := time.Parse("2006-01-02 15:04:05", createdAtStr)
-		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
-		user.Created_at = createdAt
-
 		if err := bcrypt.CompareHashAndPassword([]byte(storedPassword), []byte(loginRequest.Password)); err != nil {
 			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
 			return
